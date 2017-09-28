@@ -32,7 +32,13 @@ class Image(ApiModel):
         return "Image: %s" % self.url
 
 
-class Video(Image):
+class Video(ApiModel):
+    def __init__(self, url, width, height ,id):
+        self.url = url
+        self.height = height
+        self.width = width
+        self.id =  id
+
     def __unicode__(self):
         return "Video: %s" % self.url
 
